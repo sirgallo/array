@@ -12,20 +12,19 @@ import "github.com/sirgallo/array"
 
 
 func main() {
-  // initialize the mmcmap filepath
- dummyArr := []int{ 1, 2, 3, 4 }
+  dummyArr := []int{ 1, 2, 3, 4 }
 
   // chunk an array
   chunked, chunkErr := array.Chunk[int](dummyArr, 2)
-	if chunkErr != nil { panic(chunkErr.Error()) }
+  if chunkErr != nil { panic(chunkErr.Error()) }
 
   // filter an array
   filterFunc := func(elem int) bool { return elem < 3 }
-	filtered := array.Filter[int](dummyArr, filterFunc)
+  filtered := array.Filter[int](dummyArr, filterFunc)
 
   // map an array
   mapFunc := func(elem int) int { return elem * 2 }
-	mapped := array.Map[int](dummyArr, mapFunc)
+  mapped := array.Map[int](dummyArr, mapFunc)
 }
 ```
 
