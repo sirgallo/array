@@ -4,11 +4,14 @@ import "testing"
 
 import "github.com/sirgallo/array"
 
+
 var testArray []int
+
 
 func init() {
 	testArray = []int{ 1, 2, 3, 4 }
 }
+
 
 func TestArray(t *testing.T) {
 	t.Run("test chunk", func(t *testing.T) {
